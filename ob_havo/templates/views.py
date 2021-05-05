@@ -27,4 +27,6 @@ def obhavo(request):
     response = requests.get(url)
     response_dict = json.loads(response.text)
     temp = response_dict["list"][0]["main"]["temp"]
-    return render(request,'obhavo.html',{'temp':temp})
+    davlenie = response_dict["list"][0]["main"]["pressure"]
+    vlajnost = response_dict["list"][0]["main"]["humidity"]
+    return render(request,'obhavo.html',{'temp':temp,'user_city':user_city,'davlenie':davlenie,'vlajnost':vlajnost})

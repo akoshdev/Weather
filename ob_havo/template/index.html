@@ -5,13 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ob-havo</title>
+    <style>
+       .header1 {
+            text-align: center;
+       }
+
+        .textareaa {
+            text-align: center;
+            margin-left: 540px;
+
+        }
+        .piera {
+            margin-left: 655px;
+            background-color: blue;
+            color: white;
+            border-radius: 10px;
+            font-family: sans-serif;
+        }
+        .piera:hover {
+            background-color: #f51302;
+            cursor: pointer;
+
+        }
+
+    </style>
 </head>
 <body>
-    <h1>Assalom</h1>
+    <h1 class="header1">Assalomu alekum!</h1>
     <form action="{% url 'akosh' %}">
-        <textarea name="usertext_city" id="pogoda" cols="30" rows="10"></textarea>
-        <textarea name="usertext_country" id="pogoda1" cols="30" rows="10"></textarea>
-        <input type="submit" value="Submit">
+        <textarea class="textareaa" name="usertext_city" id="pogoda" cols="20" rows="5" placeholder="Viloyat tuman yoki shaxar nomini kiriting!"></textarea>
+        <textarea class="textareaaa" name="usertext_country" id="pogoda1" cols="20" rows="5" placeholder="Respublika nomini kiriting!"></textarea>
+        <p><input class="piera" type="submit" value="Ma`lumot olish"></p>
     </form>
 </body>
 </html>
